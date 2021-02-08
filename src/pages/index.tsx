@@ -1,6 +1,4 @@
 import { GetServerSideProps } from 'next'
-import { useEffect, useState } from 'react'
-import useFetch from 'use-http'
 import { Title } from '../styles/pages/Home'
 
 interface IProduct {
@@ -14,17 +12,6 @@ interface HomeProps {
 
 
 export default function Home({ recommendedProducts }: HomeProps) {
-  useEffect(() => {
-    async function fetchRecommendedProducts() {
-      
-    }
-    fetchRecommendedProducts()
-  }, [])
-
-  // if (loading) return <Title>Carregando...</Title>
-
-  // if (error) return <Title>Erro ao carregar a página, tente novamente mais tarde.</Title>
-
   return (
     <div>
       <Title>Products</Title>
