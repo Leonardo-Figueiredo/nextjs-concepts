@@ -1,7 +1,7 @@
-import { GetStaticPaths, GetStaticProps } from "next";
-import { useRouter } from "next/router";
-import ICategory from "../../models/ICategory";
-import IProduct from "../../models/IProduct";
+import { GetStaticPaths, GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import ICategory from "../../models/ICategory"
+import IProduct from "../../models/IProduct"
 
 interface CategoryProps {
   products: IProduct[]
