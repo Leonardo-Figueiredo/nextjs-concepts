@@ -22,7 +22,7 @@ export default function Top10({ products }: Top10Props) {
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`)
+  const response = await fetch(`${process.env.API_URL}/products`)
   const products = await response.json()
 
   return {
