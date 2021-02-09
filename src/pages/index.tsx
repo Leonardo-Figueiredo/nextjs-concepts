@@ -23,7 +23,6 @@ export default function Home({ recommendedProducts }: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  console.log(process.env.NEXT_PUBLIC_API_URL)
   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`)
   const recommendedProducts = await response.json()
 
