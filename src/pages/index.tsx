@@ -1,15 +1,10 @@
 import { GetServerSideProps } from 'next'
+import IProduct from '../models/IProduct'
 import { Title } from '../styles/pages/Home'
-
-interface IProduct {
-  id: string
-  title: string
-}
 
 interface HomeProps {
   recommendedProducts: IProduct[]
 }
-
 
 export default function Home({ recommendedProducts }: HomeProps) {
   return (
@@ -28,7 +23,8 @@ export default function Home({ recommendedProducts }: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const response = await fetch('http://localhost:3333/recommended')
+  console.log(process.env.NEXT_PUBLIC_API_URL)
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/recommended`)
   const recommendedProducts = await response.json()
 
   return {
