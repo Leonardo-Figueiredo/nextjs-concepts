@@ -21,8 +21,11 @@ const SEO: React.FC<SEOProps> = ({
   return (
     <Head>
       <title>{pageTitle}</title>
-      {description && <meta name="description" content={description} />}
-      {image && <meta name="image" content={pageImage} />}
+      
+      { description && <meta name="description" content={description} /> }
+      { image && <meta name="image" content={pageImage} /> }
+
+      { !shouldIndexPage && <meta name="robots" content="noindex,nofollow" /> }
 
       <meta httpEquiv="x-ua-compatible" content="IE=edge,chrome=1" />
       <meta name="MobileOptimized" content="320" />
