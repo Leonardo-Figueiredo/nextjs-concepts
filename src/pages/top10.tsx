@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next"
-import IProduct from "../models/IProduct"
+import IProduct from "@/models/IProduct"
 
 interface Top10Props {
   products: IProduct[]

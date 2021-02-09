@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next'
-import IProduct from '../models/IProduct'
-import { Title } from '../styles/pages/Home'
+import IProduct from '@/models/IProduct'
+import { Title } from '@/styles/pages/Home'
 
 interface HomeProps {
   recommendedProducts: IProduct[]
