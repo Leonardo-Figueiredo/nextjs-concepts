@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
-import Prismic from 'prismic-javascript'
 import PrismicDOM from 'prismic-dom'
 import { Document} from 'prismic-javascript/types/documents'
 import { client } from "@/libg/prismic"
